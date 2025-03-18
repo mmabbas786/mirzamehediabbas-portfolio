@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="container px-6 mx-auto grid md:grid-cols-2 gap-12 relative z-10">
         <div className="flex flex-col justify-center md:pr-8">
           <div className="space-y-6 max-w-xl">
-            <span className="inline-block px-3 py-1 glass-effect rounded-full text-xs font-medium tracking-wider opacity-90 animate-fade-in mb-4">
+            <span className="inline-block px-3 py-1 glass-effect rounded-full text-xs font-medium tracking-wider opacity-90 mb-4">
               MOBILE APP DEVELOPER
             </span>
             
@@ -72,13 +72,13 @@ const Hero = () => {
         </div>
         
         <div className="flex items-center justify-center relative md:justify-end">
-          {/* Phone mockups - fixed orientation */}
+          {/* Phone mockups - corrected orientation */}
           <div className="relative animate-float">
             <div className="absolute right-10 -top-6 animate-float" style={{
               animationDelay: '0.5s',
               animationDuration: '7s'
             }}>
-              <div className="w-52 h-[420px] rounded-[40px] border-8 border-black bg-white overflow-hidden shadow-2xl transform rotate-6 relative">
+              <div className="w-52 h-[420px] rounded-[40px] border-8 border-black bg-white overflow-hidden shadow-2xl transform -rotate-6 relative">
                 {/* iPhone notch */}
                 <div className="absolute top-0 left-0 w-full h-6 bg-black z-10 flex justify-center items-end">
                   <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>

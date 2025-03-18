@@ -92,10 +92,10 @@ const Index = () => {
       <main className="overflow-hidden">
         <Hero />
         
-        {/* Projects Section */}
+        {/* Projects Section - Updated background to match footer */}
         <section className="py-24 relative">
-          {/* Updated background to match Projects page - darker with animated orbs */}
-          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950 via-mirzaPurple-950 to-mirzaBlue-950 z-0"></div>
+          {/* Updated background to match footer style */}
+          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950 via-mirzaPurple-950 to-background z-0"></div>
           <div className="absolute top-1/4 right-1/3 w-96 h-96 rounded-full bg-mirzaPurple-600/10 blur-[120px] animate-pulse-light"></div>
           <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-mirzaBlue-600/10 blur-[100px] animate-pulse-light"></div>
           
