@@ -88,7 +88,7 @@ const Hero = () => {
             {/* This was previously the back phone, now bringing it to the front */}
             <div className="w-60 h-[480px] rounded-[40px] border-8 border-black bg-white overflow-hidden shadow-2xl relative">
               {/* iPhone notch */}
-              <div className="absolute top-0 left-0 w-full h-6 bg-black z-10 flex justify-center items-center">
+              <div className="absolute top-0 left-0 w-full h-6 bg-black z-10 flex justify-center items-end">
                 <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>
               </div>
               <img src="/lovable-uploads/f1b8ad0c-dfc1-47e6-a8ee-c671bc0ea2ad.png" alt="App Preview" className="w-full h-full object-cover" />
