@@ -39,8 +39,12 @@ const Navbar = () => {
     >
       <div className="container px-6 mx-auto flex justify-between items-center">
         <Link to="/" className="relative z-10 flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-mirzaPurple-400 to-mirzaBlue-400 flex items-center justify-center text-white font-bold text-lg">
-            M
+          <div className="w-10 h-10 rounded-lg overflow-hidden">
+            <img 
+              src="/lovable-uploads/5e621d18-a56d-4b41-99cf-2b2bb920a5d8.png" 
+              alt="Mirza Codes Logo" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="text-xl font-space-grotesk font-bold tracking-tight text-white">
             Mirza Codes
@@ -63,6 +67,19 @@ const Navbar = () => {
               }`}
             >
               <div className="h-full flex flex-col items-center justify-center space-y-8 p-6">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-lg overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/5e621d18-a56d-4b41-99cf-2b2bb920a5d8.png" 
+                      alt="Mirza Codes Logo" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className="text-2xl font-space-grotesk font-bold tracking-tight text-white">
+                    Mirza Codes
+                  </span>
+                </div>
+                
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
