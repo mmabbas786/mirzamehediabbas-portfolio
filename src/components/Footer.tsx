@@ -1,5 +1,6 @@
+
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Mail, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -33,6 +34,9 @@ const Footer = () => {
               </a>
               <a href="#" className="text-white/60 hover:text-white transition-smooth" aria-label="Twitter">
                 <Twitter size={20} />
+              </a>
+              <a href="#" className="text-white/60 hover:text-white transition-smooth" aria-label="Instagram">
+                <Instagram size={20} />
               </a>
               <a href="mailto:contact@mirzacodes.com" className="text-white/60 hover:text-white transition-smooth" aria-label="Email">
                 <Mail size={20} />

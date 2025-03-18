@@ -21,7 +21,7 @@ const Index = () => {
       technologies: [
         { name: 'Flutter', color: '#61DAFB' },
         { name: 'Firebase', color: '#FFCA28' },
-        { name: 'TensorFlow Lite', color: '#FF6F00' },
+        { name: 'Supabase', color: '#3ECF8E' },
       ],
       projectLink: '#',
       appType: 'flutter' as const,
@@ -37,8 +37,8 @@ const Index = () => {
       ],
       technologies: [
         { name: 'Flutter', color: '#4FC08D' },
-        { name: 'Supabase', color: '#8BC34A' },
-        { name: 'Firebase', color: '#47A248' },
+        { name: 'Supabase', color: '#3ECF8E' },
+        { name: 'Firebase', color: '#FFCA28' },
       ],
       projectLink: '#',
       isReversed: true,
@@ -94,9 +94,10 @@ const Index = () => {
         
         {/* Projects Section */}
         <section className="py-24 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950/80 via-mirzaPurple-900/60 to-mirzaBlue-950/80 z-0"></div>
-          <div className="absolute top-1/4 right-1/3 w-96 h-96 rounded-full bg-mirzaPurple-600/20 blur-[120px] animate-pulse-light"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-mirzaBlue-600/20 blur-[100px] animate-pulse-light"></div>
+          {/* Updated background to match Projects page - darker with animated orbs */}
+          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950 via-mirzaPurple-950 to-mirzaBlue-950 z-0"></div>
+          <div className="absolute top-1/4 right-1/3 w-96 h-96 rounded-full bg-mirzaPurple-600/10 blur-[120px] animate-pulse-light"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-mirzaBlue-600/10 blur-[100px] animate-pulse-light"></div>
           
           <div className="container px-6 mx-auto relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -151,13 +152,13 @@ const Index = () => {
               {skills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className="glass-card rounded-xl p-6 hover:translate-y-[-5px] transition-smooth animate-fade-in-up hover:border-mirzaPurple-500/30 hover:shadow-lg hover:shadow-mirzaPurple-900/20"
+                  className="glass-card rounded-xl p-6 hover:-translate-y-2 transition-smooth animate-fade-in-up hover:border-mirzaPurple-500/30 hover:shadow-lg hover:shadow-mirzaPurple-900/20 group"
                   style={{ animationDelay: `${0.1 * index}s`, opacity: 0 }}
                 >
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${skill.color} flex items-center justify-center text-white mb-4`}>
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${skill.color} flex items-center justify-center text-white mb-4 transform group-hover:scale-110 transition-transform duration-300`}>
                     {skill.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{skill.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-mirzaPurple-300 transition-colors duration-300">{skill.title}</h3>
                   <p className="text-white/70 text-sm">{skill.description}</p>
                 </div>
               ))}

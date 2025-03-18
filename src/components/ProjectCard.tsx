@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-interface Technology {
+export interface Technology {
   name: string;
   color: string;
 }

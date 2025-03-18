@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden" style={{ cursor: 'default' }}>
+    <section className="relative min-h-screen flex items-center pt-32 overflow-hidden" style={{ cursor: 'default' }}>
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-mirzaPurple-950 via-background to-mirzaBlue-950 z-0"></div>
       
@@ -72,13 +72,13 @@ const Hero = () => {
         </div>
         
         <div className="flex items-center justify-center relative md:justify-end">
-          {/* Phone mockups */}
+          {/* Phone mockups - fixed orientation */}
           <div className="relative animate-float">
             <div className="absolute right-10 -top-6 animate-float" style={{
               animationDelay: '0.5s',
               animationDuration: '7s'
             }}>
-              <div className="w-52 h-[420px] rounded-[40px] border-8 border-black bg-white overflow-hidden shadow-2xl transform -rotate-6 relative">
+              <div className="w-52 h-[420px] rounded-[40px] border-8 border-black bg-white overflow-hidden shadow-2xl transform rotate-6 relative">
                 {/* iPhone notch */}
                 <div className="absolute top-0 left-0 w-full h-6 bg-black z-10 flex justify-center items-end">
                   <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>
