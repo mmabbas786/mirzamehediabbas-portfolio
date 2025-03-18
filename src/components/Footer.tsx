@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from 'lucide-react';
 
@@ -9,8 +8,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-mirzaPurple-400 to-mirzaBlue-400 flex items-center justify-center text-white font-bold text-sm">
-                M
+              <div className="w-8 h-8 rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/5e621d18-a56d-4b41-99cf-2b2bb920a5d8.png" 
+                  alt="Mirza Codes Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="text-lg font-space-grotesk font-bold tracking-tight text-white">
                 Mirza Codes
