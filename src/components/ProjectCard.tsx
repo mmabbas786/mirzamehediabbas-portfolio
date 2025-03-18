@@ -44,7 +44,7 @@ const ProjectCard = ({
 
   return (
     <div 
-      className="relative rounded-3xl overflow-hidden bg-mirzaPurple-950/50 p-8 md:p-12 backdrop-blur-md border border-white/5"
+      className="relative rounded-3xl overflow-hidden bg-mirzaPurple-950/50 p-8 md:p-12 backdrop-blur-md border border-white/5 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-mirzaPurple-900/20 hover:border-mirzaPurple-500/30"
       style={{ 
         animationDelay: `${delay}s`,
         opacity: 1
@@ -62,7 +62,7 @@ const ProjectCard = ({
               {technologies.map((tech, index) => (
                 <span 
                   key={index} 
-                  className="px-3 py-1 rounded-full text-xs font-medium" 
+                  className="px-3 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105" 
                   style={{ backgroundColor: `${tech.color}25`, color: tech.color }}
                 >
                   {tech.name}
@@ -85,8 +85,12 @@ const ProjectCard = ({
         
         <div className={`${isReversed && !isMobile ? 'md:order-1' : ''}`}>
           {appScreenshots.length > 0 ? (
-            <div className="relative w-full max-w-xs mx-auto">
-              <div className="w-full aspect-[9/19] rounded-3xl overflow-hidden border-8 border-black bg-white shadow-xl">
+            <div className="relative w-full max-w-xs mx-auto transform transition-all duration-300 hover:scale-105">
+              <div className="w-full aspect-[9/19] rounded-3xl overflow-hidden border-8 border-black bg-white shadow-xl relative">
+                {/* iPhone notch */}
+                <div className="absolute top-0 left-0 w-full h-6 bg-black z-10 flex justify-center items-end">
+                  <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>
+                </div>
                 <Carousel className="w-full">
                   <CarouselContent>
                     {appScreenshots.map((screenshot, index) => (
@@ -110,8 +114,12 @@ const ProjectCard = ({
               </div>
             </div>
           ) : (
-            <div className="w-full max-w-xs mx-auto">
-              <div className="w-full aspect-[9/19] rounded-3xl overflow-hidden border-8 border-black bg-white shadow-xl">
+            <div className="w-full max-w-xs mx-auto transform transition-all duration-300 hover:scale-105">
+              <div className="w-full aspect-[9/19] rounded-3xl overflow-hidden border-8 border-black bg-white shadow-xl relative">
+                {/* iPhone notch */}
+                <div className="absolute top-0 left-0 w-full h-6 bg-black z-10 flex justify-center items-end">
+                  <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>
+                </div>
                 <img 
                   src={image} 
                   alt={title} 

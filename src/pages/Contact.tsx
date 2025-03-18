@@ -1,6 +1,6 @@
 
 import { Fragment } from 'react';
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Github, Linkedin, Instagram } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
@@ -39,8 +39,8 @@ const Contact = () => {
       link: '#',
     },
     {
-      icon: <Twitter size={20} />,
-      name: 'Twitter',
+      icon: <Instagram size={20} />,
+      name: 'Instagram',
       link: '#',
     },
   ];
@@ -79,7 +79,7 @@ const Contact = () => {
                   <a 
                     key={index}
                     href={item.link}
-                    className="flex items-start space-x-4 purple-card p-4 transition-smooth hover:translate-y-[-5px]"
+                    className="flex items-start space-x-4 purple-card p-4 transition-smooth hover:translate-y-[-5px] hover:border-mirzaPurple-500/30 hover:shadow-lg"
                     target={item.title === 'Location' ? '_blank' : undefined}
                     rel={item.title === 'Location' ? 'noopener noreferrer' : undefined}
                   >
@@ -99,7 +99,7 @@ const Contact = () => {
                     <a 
                       key={index}
                       href={social.link}
-                      className="w-11 h-11 rounded-full glass-effect flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-smooth"
+                      className="w-11 h-11 rounded-full glass-effect flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-smooth hover:scale-110"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.name}
@@ -111,7 +111,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="purple-card p-6 md:p-8">
+            <div className="purple-card p-6 md:p-8 hover:border-mirzaPurple-500/30 hover:shadow-lg transition-all duration-300">
               <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
               <ContactForm />
             </div>

@@ -21,10 +21,10 @@ const Index = () => {
       technologies: [
         { name: 'Flutter', color: '#61DAFB' },
         { name: 'Firebase', color: '#FFCA28' },
-        { name: 'TensorFlow', color: '#FF6F00' },
+        { name: 'TensorFlow Lite', color: '#FF6F00' },
       ],
       projectLink: '#',
-      appType: 'flutter',
+      appType: 'flutter' as const,
     },
     {
       title: 'Fitness Tracker',
@@ -37,50 +37,50 @@ const Index = () => {
       ],
       technologies: [
         { name: 'Flutter', color: '#4FC08D' },
-        { name: 'Firebase', color: '#8BC34A' },
-        { name: 'MongoDB', color: '#47A248' },
+        { name: 'Supabase', color: '#8BC34A' },
+        { name: 'Firebase', color: '#47A248' },
       ],
       projectLink: '#',
       isReversed: true,
-      appType: 'flutter',
+      appType: 'flutter' as const,
     },
   ];
 
   const skills = [
     {
       icon: <Code size={24} />,
-      title: 'Frontend Development',
-      description: 'Creating responsive and interactive user interfaces with modern frameworks.',
+      title: 'Flutter Development',
+      description: 'Creating responsive and interactive mobile apps with Flutter.',
       color: 'from-blue-500 to-cyan-400',
     },
     {
       icon: <Database size={24} />,
-      title: 'Backend Systems',
-      description: 'Building robust server-side applications and RESTful APIs.',
+      title: 'Backend Integration',
+      description: 'Building robust APIs and database solutions for mobile apps.',
       color: 'from-purple-500 to-indigo-400',
     },
     {
       icon: <PaintBucket size={24} />,
       title: 'UI/UX Design',
-      description: 'Designing intuitive and visually appealing user experiences.',
+      description: 'Designing intuitive and visually appealing mobile experiences.',
       color: 'from-pink-500 to-rose-400',
     },
     {
       icon: <Layers size={24} />,
-      title: 'Full Stack Integration',
-      description: 'Seamlessly connecting frontend and backend components.',
+      title: 'Cross-Platform',
+      description: 'Developing apps that work seamlessly on iOS and Android.',
       color: 'from-amber-500 to-orange-400',
     },
     {
       icon: <Cpu size={24} />,
-      title: 'Performance Optimization',
-      description: 'Enhancing application speed and resource efficiency.',
+      title: 'Native Performance',
+      description: 'Optimizing mobile apps for speed and resource efficiency.',
       color: 'from-green-500 to-emerald-400',
     },
     {
       icon: <GitBranch size={24} />,
-      title: 'Version Control',
-      description: 'Managing code changes and collaborating with Git.',
+      title: 'Agile Development',
+      description: 'Implementing continuous integration and delivery for mobile.',
       color: 'from-red-500 to-rose-400',
     },
   ];
@@ -143,7 +143,7 @@ const Index = () => {
               </span>
               <h2 className="text-3xl md:text-4xl font-bold">Technical Skills</h2>
               <p className="text-white/70">
-                A comprehensive toolkit for building powerful web applications.
+                A comprehensive toolkit for building powerful mobile applications.
               </p>
             </div>
             
@@ -151,7 +151,7 @@ const Index = () => {
               {skills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className="glass-card rounded-xl p-6 hover:translate-y-[-5px] transition-smooth animate-fade-in-up"
+                  className="glass-card rounded-xl p-6 hover:translate-y-[-5px] transition-smooth animate-fade-in-up hover:border-mirzaPurple-500/30 hover:shadow-lg hover:shadow-mirzaPurple-900/20"
                   style={{ animationDelay: `${0.1 * index}s`, opacity: 0 }}
                 >
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${skill.color} flex items-center justify-center text-white mb-4`}>
