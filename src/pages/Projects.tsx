@@ -8,10 +8,10 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   
   const projectCategories = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'web', name: 'Web Apps' },
-    { id: 'mobile', name: 'Mobile Apps' },
-    { id: 'design', name: 'UI/UX Design' },
+    { id: 'all', name: 'All Apps' },
+    { id: 'flutter', name: 'Flutter Apps' },
+    { id: 'react-native', name: 'React Native' },
+    { id: 'ios', name: 'iOS Native' },
   ];
 
   const projects = [
@@ -19,73 +19,78 @@ const Projects = () => {
       title: 'TaskMaster Pro',
       description: 'A sophisticated task management app with AI-powered prioritization, custom categories, and real-time collaboration features.',
       image: 'https://images.unsplash.com/photo-1570447997875-cbf8b4df8fba?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      appScreenshots: [
+        '/lovable-uploads/9bf63242-4052-460e-81aa-92ca6cb88854.png',
+        'https://images.unsplash.com/photo-1570447997875-cbf8b4df8fba?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      ],
       technologies: [
-        { name: 'React', color: '#61DAFB' },
+        { name: 'Flutter', color: '#02569B' },
         { name: 'Firebase', color: '#FFCA28' },
-        { name: 'TensorFlow.js', color: '#FF6F00' },
+        { name: 'TensorFlow Lite', color: '#FF6F00' },
       ],
       projectLink: '#',
-      category: 'web',
+      category: 'flutter',
+      appType: 'flutter',
     },
     {
-      title: 'Fitness Tracker Dashboard',
-      description: 'Comprehensive fitness tracking platform with workout scheduling, progress visualization, and integration with wearable devices.',
+      title: 'FitFlow',
+      description: 'Personalized fitness tracking app with workout plans, nutrition guidance, and progress analytics.',
       image: 'https://images.unsplash.com/photo-1434494817513-cc112a976722?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      appScreenshots: [
+        '/lovable-uploads/f1b8ad0c-dfc1-47e6-a8ee-c671bc0ea2ad.png',
+        'https://images.unsplash.com/photo-1434494817513-cc112a976722?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      ],
       technologies: [
-        { name: 'Vue.js', color: '#4FC08D' },
+        { name: 'Flutter', color: '#02569B' },
         { name: 'Node.js', color: '#8BC34A' },
         { name: 'MongoDB', color: '#47A248' },
       ],
       projectLink: '#',
-      category: 'web',
+      category: 'flutter',
+      appType: 'flutter',
     },
     {
-      title: 'EcoTrack Mobile App',
-      description: 'Mobile application for tracking personal carbon footprint with gamification elements to encourage sustainable behaviors.',
+      title: 'SocialSync',
+      description: 'Next-gen social networking platform with AR filters, story sharing, and encrypted messaging.',
       image: 'https://images.unsplash.com/photo-1542893832-42e4782c16c9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
-      technologies: [
-        { name: 'React Native', color: '#61DAFB' },
-        { name: 'Redux', color: '#764ABC' },
-        { name: 'Node.js', color: '#8BC34A' },
+      appScreenshots: [
+        '/lovable-uploads/390026e4-9aac-4b9f-aaa8-754bd30ab4bf.png',
+        'https://images.unsplash.com/photo-1542893832-42e4782c16c9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
       ],
-      projectLink: '#',
-      category: 'mobile',
-    },
-    {
-      title: 'Financial Dashboard UI Design',
-      description: 'Clean and intuitive interface design for a financial analytics platform with data visualization components.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
-      technologies: [
-        { name: 'Figma', color: '#F24E1E' },
-        { name: 'Adobe XD', color: '#FF61F6' },
-        { name: 'Illustrator', color: '#FF9A00' },
-      ],
-      projectLink: '#',
-      category: 'design',
-    },
-    {
-      title: 'Local Restaurant Marketplace',
-      description: 'Online marketplace connecting local restaurants with customers, featuring order tracking and delivery integration.',
-      image: 'https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
-      technologies: [
-        { name: 'Angular', color: '#DD0031' },
-        { name: 'Express', color: '#000000' },
-        { name: 'PostgreSQL', color: '#336791' },
-      ],
-      projectLink: '#',
-      category: 'web',
-    },
-    {
-      title: 'Travel Companion App',
-      description: 'Mobile app for travelers with itinerary planning, local recommendations, and offline mapping capabilities.',
-      image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
       technologies: [
         { name: 'Flutter', color: '#02569B' },
-        { name: 'Firebase', color: '#FFCA28' },
-        { name: 'Google Maps API', color: '#4285F4' },
+        { name: 'AWS', color: '#FF9900' },
+        { name: 'WebRTC', color: '#333333' },
       ],
       projectLink: '#',
-      category: 'mobile',
+      category: 'flutter',
+      appType: 'flutter',
+    },
+    {
+      title: 'CryptoWallet',
+      description: 'Secure cryptocurrency wallet with multi-chain support, real-time tracking, and NFT management.',
+      image: 'https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      technologies: [
+        { name: 'React Native', color: '#61DAFB' },
+        { name: 'Solidity', color: '#363636' },
+        { name: 'Web3.js', color: '#F16822' },
+      ],
+      projectLink: '#',
+      category: 'react-native',
+      appType: 'react-native',
+    },
+    {
+      title: 'TravelCompanion',
+      description: 'Feature-rich travel app with itinerary planning, offline maps, and local recommendations.',
+      image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      technologies: [
+        { name: 'iOS Swift', color: '#F05138' },
+        { name: 'Core ML', color: '#1D8348' },
+        { name: 'MapKit', color: '#4285F4' },
+      ],
+      projectLink: '#',
+      category: 'ios',
+      appType: 'ios',
     },
   ];
 
@@ -97,15 +102,19 @@ const Projects = () => {
     <Fragment>
       <Navbar />
       
-      <main className="pt-28 pb-24">
-        <div className="container px-6 mx-auto">
+      <main className="pt-28 pb-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950/5 via-mirzaPurple-950/5 to-mirzaPurple-950/20 z-0"></div>
+        <div className="absolute top-1/4 right-1/4 w-72 h-72 rounded-full bg-mirzaPurple-500/10 blur-[100px] animate-pulse-light"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-mirzaBlue-500/10 blur-[100px] animate-pulse-light"></div>
+        
+        <div className="container px-6 mx-auto relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4 animate-fade-in-up">
             <span className="inline-block px-3 py-1 glass-effect rounded-full text-xs font-medium tracking-wider opacity-90">
-              MY WORK
+              MOBILE PROJECTS
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold">Projects Portfolio</h1>
-            <p className="text-white/70">
-              Explore my collection of projects showcasing my technical skills and creative problem-solving.
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">Our Projects</h1>
+            <p className="text-white/70 text-xl">
+              Discover our portfolio of innovative Flutter applications
             </p>
           </div>
           
@@ -127,7 +136,7 @@ const Projects = () => {
             </div>
           </div>
           
-          <div className="space-y-24 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div className="space-y-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             {filteredProjects.map((project, index) => (
               <ProjectCard
                 key={index}
