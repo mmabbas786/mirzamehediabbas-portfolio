@@ -15,7 +15,7 @@ interface Technology {
   color: string;
 }
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
@@ -25,6 +25,7 @@ interface ProjectCardProps {
   isReversed?: boolean;
   delay?: number;
   appType?: 'flutter' | 'react-native' | 'ios' | 'android';
+  category?: string;
 }
 
 const ProjectCard = ({

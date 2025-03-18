@@ -13,24 +13,36 @@ const Index = () => {
       title: 'TaskMaster Pro',
       description: 'A sophisticated task management app with AI-powered prioritization, custom categories, and real-time collaboration features.',
       image: 'https://images.unsplash.com/photo-1570447997875-cbf8b4df8fba?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      appScreenshots: [
+        '/lovable-uploads/5e621d18-a56d-4b41-99cf-2b2bb920a5d8.png',
+        '/lovable-uploads/9bf63242-4052-460e-81aa-92ca6cb88854.png',
+        '/lovable-uploads/f1b8ad0c-dfc1-47e6-a8ee-c671bc0ea2ad.png'
+      ],
       technologies: [
-        { name: 'React', color: '#61DAFB' },
+        { name: 'Flutter', color: '#61DAFB' },
         { name: 'Firebase', color: '#FFCA28' },
-        { name: 'TensorFlow.js', color: '#FF6F00' },
+        { name: 'TensorFlow', color: '#FF6F00' },
       ],
       projectLink: '#',
+      appType: 'flutter',
     },
     {
-      title: 'Fitness Tracker Dashboard',
+      title: 'Fitness Tracker',
       description: 'Comprehensive fitness tracking platform with workout scheduling, progress visualization, and integration with wearable devices.',
       image: 'https://images.unsplash.com/photo-1434494817513-cc112a976722?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+      appScreenshots: [
+        '/lovable-uploads/9bf63242-4052-460e-81aa-92ca6cb88854.png',
+        '/lovable-uploads/f1b8ad0c-dfc1-47e6-a8ee-c671bc0ea2ad.png',
+        '/lovable-uploads/5e621d18-a56d-4b41-99cf-2b2bb920a5d8.png'
+      ],
       technologies: [
-        { name: 'Vue.js', color: '#4FC08D' },
-        { name: 'Node.js', color: '#8BC34A' },
+        { name: 'Flutter', color: '#4FC08D' },
+        { name: 'Firebase', color: '#8BC34A' },
         { name: 'MongoDB', color: '#47A248' },
       ],
       projectLink: '#',
       isReversed: true,
+      appType: 'flutter',
     },
   ];
 
@@ -82,7 +94,9 @@ const Index = () => {
         
         {/* Projects Section */}
         <section className="py-24 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950/80 via-mirzaPurple-900/60 to-mirzaBlue-950/80 z-0"></div>
+          <div className="absolute top-1/4 right-1/3 w-96 h-96 rounded-full bg-mirzaPurple-600/20 blur-[120px] animate-pulse-light"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-mirzaBlue-600/20 blur-[100px] animate-pulse-light"></div>
           
           <div className="container px-6 mx-auto relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -91,7 +105,7 @@ const Index = () => {
               </span>
               <h2 className="text-3xl md:text-4xl font-bold">Recent Projects</h2>
               <p className="text-white/70">
-                Explore a selection of my latest work showcasing my skills and expertise.
+                Explore a selection of my latest mobile app development work.
               </p>
             </div>
             
