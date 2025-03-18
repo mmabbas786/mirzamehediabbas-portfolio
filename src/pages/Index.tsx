@@ -1,4 +1,3 @@
-
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Code, PaintBucket, Layers, Cpu, Database, GitBranch } from 'lucide-react';
@@ -92,10 +91,8 @@ const Index = () => {
       <main className="overflow-hidden">
         <Hero />
         
-        {/* Projects Section - Updated background to match footer */}
         <section className="py-24 relative">
-          {/* Updated background to match footer style */}
-          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-950 via-mirzaPurple-950 to-background z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-mirzaPurple-800/30 via-mirzaPurple-700/20 to-background z-0"></div>
           <div className="absolute top-1/4 right-1/3 w-96 h-96 rounded-full bg-mirzaPurple-600/10 blur-[120px] animate-pulse-light"></div>
           <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-mirzaBlue-600/10 blur-[100px] animate-pulse-light"></div>
           
@@ -131,7 +128,6 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Skills Section */}
         <section className="py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-mirzaPurple-950/10 to-background z-0"></div>
           <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-mirzaPurple-500/10 blur-[80px] animate-pulse-light"></div>
@@ -166,7 +162,6 @@ const Index = () => {
           </div>
         </section>
         
-        {/* CTA Section */}
         <section className="py-24 relative">
           <div className="container px-6 mx-auto">
             <div className="glass-card rounded-2xl p-8 md:p-12 overflow-hidden relative">
