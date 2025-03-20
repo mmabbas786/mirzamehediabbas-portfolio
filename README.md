@@ -32,7 +32,7 @@ cd mirzamehediabbas-portfolio
 ## 📧 Contact
 - **Email:** mirzamehediabbas@gmail.com
 - **GitHub:** [@mmabbas786](https://github.com/mmabbas786)
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/mirzamehediabbas)
+- **LinkedIn:** [My LinkedIn](https://linkedin.com/in/mirzamehediabbas)
 
 Feel free to explore and contribute! 😊
 
