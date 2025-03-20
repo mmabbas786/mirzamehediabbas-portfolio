@@ -1,87 +1,154 @@
-
-import { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import { Send, Loader2 } from 'lucide-react';
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Send, Loader2 } from "lucide-react";
+import useWeb3Forms from "@web3forms/react";
+import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    mode: "onTouched",
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  // Using your provided access key
+  const apiKey = "a25d7a54-0839-4b31-9598-28a7c05903da";
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+  const { submit: onSubmit } = useWeb3Forms({
+    access_key: apiKey,
+    settings: {
+      from_name: "Your Website",
+      subject: "New Contact Message from your Website",
+    },
+    onSuccess: (msg) => {
+      setIsSuccess(true);
+      setMessage(msg);
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
-      setFormData({ name: '', email: '', message: '' });
-    }, 1500);
-  };
+      reset();
+    },
+    onError: (msg) => {
+      setIsSuccess(false);
+      setMessage(msg);
+      toast({
+        title: "Error",
+        description: msg || "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    },
+  });
 
   return (
-    <form onSubmit={handleSubmit} className="glass-card rounded-xl p-6 space-y-6">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="glass-card rounded-xl p-6 space-y-6"
+    >
+      <input
+        type="checkbox"
+        id=""
+        className="hidden"
+        style={{ display: "none" }}
+        {...register("botcheck" as "name" | "email" | "message")}
+      />
+
       <div className="space-y-2">
-        <label htmlFor="name" className="block text-sm font-medium text-white/80">
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-white/80"
+        >
           Your Name
         </label>
         <input
           id="name"
-          name="name"
           type="text"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg glass-effect text-white bg-white/5 border-white/10 focus:border-mirzaPurple-400 focus:ring-1 focus:ring-mirzaPurple-400 focus:outline-none transition-smooth"
+          className={`w-full px-4 py-3 rounded-lg glass-effect text-white bg-white/5 border-white/10 focus:ring-1 focus:outline-none transition-smooth ${
+            errors.name
+              ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+              : "focus:border-mirzaPurple-400 focus:ring-mirzaPurple-400"
+          }`}
           placeholder="John Doe"
+          {...register("name", {
+            required: "Full name is required",
+            maxLength: 80,
+          })}
         />
+        {errors.name && (
+          <div className="mt-1 text-red-500 text-sm">{errors.name.message}</div>
+        )}
       </div>
-      
+
       <div className="space-y-2">
-        <label htmlFor="email" className="block text-sm font-medium text-white/80">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-white/80"
+        >
           Email Address
         </label>
         <input
           id="email"
-          name="email"
           type="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg glass-effect text-white bg-white/5 border-white/10 focus:border-mirzaPurple-400 focus:ring-1 focus:ring-mirzaPurple-400 focus:outline-none transition-smooth"
+          className={`w-full px-4 py-3 rounded-lg glass-effect text-white bg-white/5 border-white/10 focus:ring-1 focus:outline-none transition-smooth ${
+            errors.email
+              ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+              : "focus:border-mirzaPurple-400 focus:ring-mirzaPurple-400"
+          }`}
           placeholder="john@example.com"
+          {...register("email", {
+            required: "Email is required",
+            pattern: {
+              value: /^\S+@\S+$/i,
+              message: "Please enter a valid email",
+            },
+          })}
         />
+        {errors.email && (
+          <div className="mt-1 text-red-500 text-sm">
+            {errors.email.message}
+          </div>
+        )}
       </div>
-      
+
       <div className="space-y-2">
-        <label htmlFor="message" className="block text-sm font-medium text-white/80">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-white/80"
+        >
           Your Message
         </label>
         <textarea
           id="message"
-          name="message"
-          required
           rows={5}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg glass-effect text-white bg-white/5 border-white/10 focus:border-mirzaPurple-400 focus:ring-1 focus:ring-mirzaPurple-400 focus:outline-none transition-smooth resize-none"
+          className={`w-full px-4 py-3 rounded-lg glass-effect text-white bg-white/5 border-white/10 focus:ring-1 focus:outline-none transition-smooth resize-none ${
+            errors.message
+              ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+              : "focus:border-mirzaPurple-400 focus:ring-mirzaPurple-400"
+          }`}
           placeholder="Hello, I'd like to discuss a project..."
+          {...register("message", {
+            required: "Please enter your message",
+          })}
         />
+        {errors.message && (
+          <div className="mt-1 text-red-500 text-sm">
+            {errors.message.message}
+          </div>
+        )}
       </div>
-      
+
       <button
         type="submit"
         disabled={isSubmitting}
@@ -99,6 +166,17 @@ const ContactForm = () => {
           </>
         )}
       </button>
+
+      {isSuccess && message && (
+        <div className="mt-3 text-sm text-center text-green-500">
+          {message || "Success. Message sent successfully"}
+        </div>
+      )}
+      {!isSuccess && message && (
+        <div className="mt-3 text-sm text-center text-red-500">
+          {message || "Something went wrong. Please try later."}
+        </div>
+      )}
     </form>
   );
 };

@@ -1,6 +1,12 @@
-
-import { Link } from 'react-router-dom';
-import { Github, Linkedin, Twitter, Instagram, Mail, ArrowUpRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Mail,
+  ArrowUpRight,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,9 +16,9 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/5e621d18-a56d-4b41-99cf-2b2bb920a5d8.png" 
-                  alt="Mirza Codes Logo" 
+                <img
+                  src="/lovable-uploads/logo.png"
+                  alt="Mirza Codes Logo"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -20,65 +26,96 @@ const Footer = () => {
                 Mirza Codes
               </span>
             </Link>
-            
+
             <p className="text-sm text-white/70 max-w-xs">
-              Building exceptional digital experiences with modern web technologies and clean code.
+              Building exceptional digital experiences with modern web
+              technologies and clean code.
             </p>
-            
+
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-white transition-smooth" aria-label="GitHub">
+              <a
+                href="https://github.com/mmabbas786"
+                className="text-white/60 hover:text-white transition-smooth"
+                aria-label="GitHub"
+              >
                 <Github size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-smooth" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/mirzamehediabbas/"
+                className="text-white/60 hover:text-white transition-smooth"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-smooth" aria-label="Twitter">
+              <a
+                href="https://x.com/mmabbasofficial"
+                className="text-white/60 hover:text-white transition-smooth"
+                aria-label="Twitter"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-smooth" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/mirza.codes/"
+                className="text-white/60 hover:text-white transition-smooth"
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="mailto:contact@mirzacodes.com" className="text-white/60 hover:text-white transition-smooth" aria-label="Email">
+              {/* <a
+                href="mirzamehediabbas@gmail.com"
+                className="text-white/60 hover:text-white transition-smooth"
+                aria-label="Email"
+              >
                 <Mail size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-medium text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm text-white/60 hover:text-white transition-smooth">
+                <Link
+                  to="/"
+                  className="text-sm text-white/60 hover:text-white transition-smooth"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="text-sm text-white/60 hover:text-white transition-smooth">
+                <Link
+                  to="/projects"
+                  className="text-sm text-white/60 hover:text-white transition-smooth"
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-white/60 hover:text-white transition-smooth">
+                <Link
+                  to="/contact"
+                  className="text-sm text-white/60 hover:text-white transition-smooth"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-medium text-white">Get In Touch</h3>
             <p className="text-sm text-white/70">
-              Ready to start your next project? Let's build something amazing together.
+              Ready to start your next project? Let's build something amazing
+              together.
             </p>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="inline-flex items-center text-sm text-mirzaPurple-300 hover:text-mirzaPurple-200 transition-smooth"
             >
               Start a conversation <ArrowUpRight size={16} className="ml-1" />
             </Link>
           </div>
         </div>
-        
+
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-white/50">
             &copy; {new Date().getFullYear()} Mirza Codes. All rights reserved.
