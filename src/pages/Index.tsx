@@ -210,7 +210,7 @@ const Index = () => {
                   Start Your Project <ArrowUpRight size={18} />
                 </Link>
                 <a
-                  href="mailto:contact@mirzacodes.com"
+                  href="mirzamehediabbas@gmail.com"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg glass-effect text-white font-medium hover:bg-white/10 transition-all duration-300"
                 >
                   Email Me
