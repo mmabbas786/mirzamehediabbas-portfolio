@@ -17,7 +17,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg overflow-hidden">
                 <img
-                  src="/lovable-uploads/logo.png"
+                  src="./lovable-uploads/logo.png"
                   alt="Mirza Codes Logo"
                   className="w-full h-full object-cover"
                 />

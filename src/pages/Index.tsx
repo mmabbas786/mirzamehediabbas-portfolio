@@ -24,10 +24,10 @@ const Index = () => {
       image:
         "https://images.unsplash.com/photo-1570447997875-cbf8b4df8fba?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800",
       appScreenshots: [
-        "public/lovable-uploads/Gotravels1.png",
-        "public/lovable-uploads/Gotravels2.png",
-        "public/lovable-uploads/Gotravels3.png",
-        "public/lovable-uploads/Gotravels4.png",
+        "./lovable-uploads/Gotravels1.png",
+        "./lovable-uploads/Gotravels2.png",
+        "./lovable-uploads/Gotravels3.png",
+        "./lovable-uploads/Gotravels4.png",
       ],
       technologies: [
         { name: "Flutter", color: "#61DAFB" },
@@ -44,10 +44,10 @@ const Index = () => {
       image:
         "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800",
       appScreenshots: [
-        "public/lovable-uploads/NeonVault1.png",
-        "public/lovable-uploads/NeonVault2.png",
-        "public/lovable-uploads/NeonVault3.png",
-        "public/lovable-uploads/NeonVault4.png",
+        "./lovable-uploads/NeonVault1.png",
+        "./lovable-uploads/NeonVault2.png",
+        "./lovable-uploads/NeonVault3.png",
+        "./lovable-uploads/NeonVault4.png",
       ],
       technologies: [
         { name: "Flutter", color: "#61DAFB" },

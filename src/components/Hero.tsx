@@ -142,7 +142,7 @@ const Hero = () => {
               <div className="w-[250px] h-[500px] rounded-[40px] border-8 border-black bg-white overflow-hidden shadow-2xl relative z-10 transform rotate-[10deg] -translate-y-4">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[30px] bg-black rounded-b-[15px] z-20"></div>
                 <img
-                  src="public/lovable-uploads/Elite1.png"
+                  src="./lovable-uploads/Elite1.png"
                   alt="App Preview"
                   className="w-full h-full object-cover"
                 />
@@ -155,7 +155,7 @@ const Hero = () => {
                 <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>
               </div>
               <img
-                src="public/lovable-uploads/NeonVault3.png"
+                src="./lovable-uploads/NeonVault3.png"
                 alt="App Preview"
                 className="w-full h-full object-cover"
               />
